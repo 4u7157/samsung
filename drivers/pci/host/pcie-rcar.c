@@ -404,9 +404,6 @@ static void rcar_pcie_enable(struct rcar_pcie *pcie)
 	rcar_pci.private_data = (void **)&pcie;
 
 	pci_common_init_dev(&pdev->dev, &rcar_pci);
-#ifdef CONFIG_PCI_DOMAINS
-	rcar_pci.domain++;
-#endif
 }
 
 static int phy_wait_for_ack(struct rcar_pcie *pcie)
